@@ -1,0 +1,15 @@
+
+
+
+<div class="cart-wrapper">
+    <div id="cart-header"><h4>Cart Items:</h4></div>
+    <div class="cart-item">
+        {{#each cartItems}}
+        <ul>
+            <li>Name: {{dataValues.ingredientName}}</li>
+            <li>Quantity: {{dataValues.qty}}</li>
+        </ul>
+        {{/each}}
+
+    </div>
+</div>

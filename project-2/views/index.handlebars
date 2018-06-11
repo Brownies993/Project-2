@@ -1,0 +1,31 @@
+<!--  Main content  -->
+
+<div class="wrapper">
+
+    <div class="hero">
+
+        <div class="header">
+            <div class="title">
+                <h1>Chef's Den</h1>
+            </div>
+            {{>header/nav-block}}
+        </div>
+
+        <div class="main">
+            {{>main/search-block}}
+        </div>
+
+    </div>
+
+    <div id="results-area">
+    </div>
+
+</div>
+
+
+<!--  Modals  -->
+
+{{>modals/login-block}} 
+{{>modals/signup-block}} 
+{{>modals/filters-block}} 
+{{>modals/recipes-block}}

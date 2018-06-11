@@ -1,0 +1,440 @@
+body,
+html {
+    background-color: #733f34;
+    height: 100%;
+}
+
+h4 {
+    font-family: 'Poiret One', cursive;
+    font-size: 28px;
+}
+
+h5 {
+    font-family: 'Poiret One', cursive;
+    font-size: 22px;
+}
+
+h6 {
+    font-family: 'Poiret One', cursive;
+    font-size: 20px;
+}
+
+/* Container */
+
+.wrapper {
+    display: grid;
+    grid-template-rows: 10fr 1fr;
+    box-sizing: border-box;
+    height: 100%;
+}
+
+.hero {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-image: url("../img/basil-delicious-food-459469.jpg");
+    display: grid;
+    grid-template-rows: 150px 1fr;
+    border-bottom: solid 10px rgba(255, 177, 32, 0.938);
+}
+
+.hero>div {
+    color: white;
+}
+
+/* Header Section */
+
+.header {
+    display: grid;
+    grid-template-columns: 1fr 5fr 1fr;
+}
+
+.title {
+    grid-column: 2 / 3;
+    padding-top: 20px;
+    text-align: center;
+}
+
+.title>h1 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 100px;
+    color: white;
+    text-shadow: 5px 5px rgba(255, 177, 32, 0.938);
+}
+
+.login {
+    grid-column: 3 / 4;
+    text-align: right;
+    padding: 10px 10px 10px 0;
+    ;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.login-buttons {
+    box-sizing: border-box;
+    padding: 0 10px;
+}
+
+/* Main Section */
+
+.main {
+    text-align: center;
+    padding: 10px;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+
+.main-input,
+.main-button {
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid rgba(255, 177, 32, 0.938);
+    box-sizing: border-box;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+.main-button {
+    background: rgba(255, 177, 32, 0.938);
+    border-color: #420C3B;
+    color: #420C3B;
+}
+
+/* Results */
+
+#results-area, #favorites-area{
+    padding: 20px 10px;
+    background-color: #fff8dc;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+}
+
+.result {
+    font-family: 'Pontano Sans', sans-serif;
+    border: solid black 1px;
+    padding: 10px 20px;
+    background-color: #fafafa;
+    color: black;
+    text-align: center;
+}
+
+/** General Modal Stuff **/
+
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    left: 0;
+    top: 0px;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+}
+
+.modal-content {
+    background-color: rgba(255, 177, 32, 0.938);
+    margin: 2% auto 15% auto;
+    border: 1px solid #888;
+    width: 80%;
+    color: black;
+}
+
+.close-container {
+    background-color: #F0E68C;
+    text-align: center;
+    padding: 16px;
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.modal-button {
+    background-color: rgb(44, 195, 14);
+    color: white;
+    padding: 14px 40px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+.modal-button:hover {
+    opacity: 0.8;
+}
+
+.accept {
+    background-color: rgb(50, 214, 50);
+}
+
+.cancel {
+    background-color: #e25f4e
+}
+
+/* Animation for the modal */
+
+.animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+    from {
+        -webkit-transform: scale(0)
+    }
+    to {
+        -webkit-transform: scale(1)
+    }
+}
+
+@keyframes animatezoom {
+    from {
+        transform: scale(0)
+    }
+    to {
+        transform: scale(1)
+    }
+}
+
+/* Login Modal styling */
+
+#login-container {
+    padding: 25px 20%;
+    line-height: 40px;
+
+}
+
+.login-modal-input {
+    width: 100%;
+    padding: 10px 20px;
+}
+
+
+/* Signup Modal Styling */
+
+#signup-container>div {
+    display: grid;
+    grid-template-rows: auto auto;
+}
+
+#signup-top-section {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+#signup-container {
+    padding: 20px;
+}
+
+.signup-inner {
+    line-height: 30px;
+}
+
+.signup-labels {
+    font-family: 'Poiret One', cursive;
+    font-weight: bold;
+}
+
+#signup-info-section,
+#signup-image-section,
+#signup-bottom-section {
+    padding: 10px;
+}
+
+#signup-info-section>ul>li>input,
+#signup-bottom-section>textarea,
+#signup-image-section>input {
+    font-family: 'Pontano Sans', sans-serif;
+    width: 100%;
+    padding: 5px 0;
+    resize: none;
+    overflow: hidden;
+}
+
+/* Filters Modal Styling */
+
+.filters-container {
+    padding: 10px;
+}
+
+.filter-button {
+    padding: 10px 15px;
+    background-color: #FF6347;
+    color: white;
+    margin: 5px;
+    display: inline-block;
+    border: 1px solid white;
+    box-sizing: border-box;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+.filter-selected {
+    background-color: red;
+}
+
+.filter-close-container {
+    background-color: #F0E68C;
+    text-align: center;
+    padding: 16px;
+}
+
+/*  Recipe Section */
+
+#recipe-section {
+    display: grid;
+    grid-template-columns: auto;
+    margin: 10px;
+}
+
+#recipe-section>div {
+    background-color: #fff8dc;
+    padding: 15px;
+    color: black;
+    font-family: 'Pontano Sans', sans-serif;
+    text-align: center;
+}
+
+#recipe-section>.recipe-name {
+    border-bottom: solid 1px black;
+}
+
+/* Recipe Result */
+
+.recipe-modal-ingredients-header {
+    font-family: 'Pontano Sans', sans-serif;
+    font-size: 24px;
+    padding: 5px 0;
+}
+
+div>#add-fav {
+    text-align: right;
+    color: #ad1400;
+    font-weight: bolder;
+    font-size: 1em;
+    border-top: solid black 1px;
+}
+
+.ingredient {
+    padding: 10px;
+}
+
+.recipe-modal-ingredients-header>p {
+    font-size: 12px;
+}
+
+#recipe-section>#fav-share-section {
+    text-align: right;
+}
+
+#recipe-section>#fav-share-section>.fav-div-properties>li {
+    display: inline-block;
+    padding: 5px;
+}
+
+
+/* Profile Page */
+
+.profile {
+    text-align: center;
+    padding: 10px 0 50px 0;
+    display: grid;
+    grid-template-rows: 1fr;
+}
+
+.profile-wrapper {
+    display: grid;
+    box-sizing: border-box;
+    grid-template-columns: 2fr 1fr;
+    margin: 10px 20%;
+    background: rgba(255, 177, 32, 0.5);
+    padding: 20px;
+    color: black;
+    border-radius: 5px;
+    
+ }
+
+ .profile-info {
+     border: solid 1px black;
+     background-color: rgba(255, 255, 255, 0.5);
+     border-radius: 5px;
+ }
+
+ .profile-info > div {
+    padding: 10px 5px;
+    text-align: left;
+    
+ }
+
+ #profile-info-header {
+     border-bottom: 1px solid black;
+ }
+
+.profile-info > div > p {
+    font-family: 'Pontano Sans', sans-serif;
+    
+}
+
+.profile-photo > img {
+    text-align: center;
+    
+}
+
+
+
+/* another section */
+
+
+.logged-in-divs, .logged-out-divs {
+    display: none;
+}
+
+
+
+
+/* Cart Section */
+
+.cart {
+    text-align: left;
+    padding: 10px 0 50px 0;
+    display: grid;
+    grid-template-rows: auto auto;
+}
+
+.cart-wrapper {
+    display: grid;
+    box-sizing: border-box;
+    grid-template-rows: 1fr 5fr;
+    margin: 10px 20%;
+    background: rgba(255, 177, 32, 0.5);
+    padding: 20px;
+    color: black;
+    border-radius: 5px;
+    
+ }
+
+ #cart-header {
+    border-bottom: 1px solid black;
+}
+
+.cart-item > ul { 
+    padding: 10px 0;
+}
+
+.cart-item > ul > li{
+    color: black;
+    font-family: 'Pontano Sans', sans-serif;
+
+}
